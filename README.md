@@ -1,4 +1,4 @@
-# Chrome extension for copying cookies between domains
+# Chrome eye dropper extension
 
 A simple eye dropper Google Chrome extension.
 This app uses eye dropper api which appeared in Google Chrome 95 version
