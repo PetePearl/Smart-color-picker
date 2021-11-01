@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Smart color picker",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Just color picker",
   "minimum_chrome_version": "95",
   "action": {
