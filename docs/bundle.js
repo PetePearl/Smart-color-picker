@@ -13,12 +13,25 @@ class colorPicker {
 
     showColor ({sRGBHex}) {
         this.$color.style.backgroundColor = sRGBHex;
-        this.$info.classList.add('info--picked');
         this.$button.classList.add('button--picked');
         this.$str.classList.add('str--picked');
         this.$hex.style.color = colorPicker.invertColor(sRGBHex);
         this.$hex.innerText = sRGBHex;
-        navigator.clipboard.writeText(sRGBHex.toUpperCase());
+        navigator.clipboard.writeText(sRGBHex.toUpperCase())
+            .then(() => {
+                this.showInfo();
+            })
+            .catch(() => {
+                this.hideInfo();
+            });
+    }
+
+    showInfo() {
+        this.$info.classList.add('info--picked');
+    }
+
+    hideInfo() {
+        this.$info.classList.remove('info--picked')
     }
 
     static invertColor(color) {
