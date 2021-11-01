@@ -6,11 +6,11 @@ This app uses eye dropper api which appeared in Google Chrome 95 version
 
 ---
 ## Screenshots:
-![Smart-color-picker screenshot 1](https://github.com/PetePearl/Smart-color-picker/blob/master/screenshots/screenshot_1.png?raw=true)
+![Smart-color-picker screenshot 1](https://raw.githubusercontent.com/PetePearl/Smart-color-picker/main/screenshots/screenshot_1.png)
 
-![Smart-color-picker screenshot 2](https://github.com/PetePearl/Smart-color-picker/blob/master/screenshots/screenshot_2.png?raw=true)
+![Smart-color-picker screenshot 2](https://raw.githubusercontent.com/PetePearl/Smart-color-picker/main/screenshots/screenshot_2.png)
 
-![Smart-color-picker screenshot 3](https://github.com/PetePearl/Smart-color-picker/blob/master/screenshots/screenshot_3.png?raw=true)
+![Smart-color-picker screenshot 3](https://raw.githubusercontent.com/PetePearl/Smart-color-picker/main/screenshots/screenshot_3.png)
 
 ---
 ## installation:
