@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Smart color picker",
+  "version": "1.0",
+  "description": "Just color picker",
+  "minimum_chrome_version": "95",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "assets/icon_16.png",
+    "48": "assets/icon_48.png",
+    "128": "assets/icon_128.png"
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Simple color picker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: monospace;
+        }
+
+        .color {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .button {
+            border: none;
+            outline: none;
+            appearance: none;
+            box-shadow: none;
+            background: none;
+            cursor: pointer;
+            color: transparent;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: .2s;
+        }
+
+        .button--picked {
+            top: 11px;
+            left: 11px;
+            transform: scale(.6) translate(-50%, -50%);
+        }
+
+        .button:hover {
+            color: #1394DD;
+        }
+
+        .button:hover path {
+            stroke: transparent;
+        }
+
+        .svg {
+            display: block;
+            width: 60px;
+            height: 60px;
+        }
+
+        .svg path {
+            transition: .3s;
+        }
+
+        .info {
+            opacity: 0;
+            font-weight: bold;
+            position: absolute;
+            z-index: 1;
+            bottom: 5px;
+            left: 5px;
+            right: 5px;
+            color: #1394DD;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            border: 1px solid #999999;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        .info--picked {
+            opacity: 1;
+        }
+
+        .str {
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            text-align: center;
+            font-size: 30px;
+            line-height: 30px;
+            font-family: monospace;
+            text-transform: uppercase;
+        }
+
+        .str--picked {
+            opacity: 1;
+        }
+    </style>
+    <script defer src="bundle.js"></script>
+</head>
+<body>
+<div class="color" id="color">
+    <button class="button" id="button">
+        <svg class="svg" preserveAspectRatio="none" width="48" height="48" viewBox="0 0 48 48" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="47" height="47" rx="9.5" fill="white" stroke="#999999"/>
+            <path stroke-alignment="inner" stroke="#999999"
+                  d="M9.58769 29.4199C9.16009 29.8422 8.82152 30.3459 8.59196 30.9012C8.3624 31.4564 8.2465 32.052 8.2511 32.6527V35.8153L6 39.751L8.2511 42L12.1905 39.751H15.3561C16.552 39.751 17.7479 39.2591 18.5921 38.4157L27.4558 29.5604L18.4514 20.5646L9.58769 29.4199ZM40.0479 7.98441C39.4205 7.35542 38.675 6.85635 37.8541 6.51582C37.0332 6.17529 36.1531 6 35.2643 6C34.3755 6 33.4954 6.17529 32.6745 6.51582C31.8536 6.85635 31.1081 7.35542 30.4807 7.98441L25.064 13.396L24.1495 12.4823C23.446 11.8498 22.3908 11.8498 21.7577 12.4823L18.8735 15.3638C18.2404 15.9963 18.2404 17.1208 18.8735 17.7533L30.2697 29.1387C30.9028 29.7713 32.0283 29.7713 32.6615 29.1387L35.5457 26.2572C36.1788 25.6247 36.1788 24.5002 35.5457 23.8677L34.6312 22.9541L40.0479 17.5425C42.6507 14.8719 42.6507 10.6551 40.0479 7.98441Z"
+                  fill="currentColor"/>
+        </svg>
+    </button>
+
+    <div class="str" id="str"><span id="hex"></span></div>
+
+    <div class="info" id="info">
+        COLOR COPIED!
+    </div>
+</div>
+</body>
+</html>
